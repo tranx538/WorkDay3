@@ -9,7 +9,9 @@ Public Class Form1
         Dim st2 As String = txtSecondNum.Text
         Dim result As String
 
-        If IsNumeric(txtFirstNum.Text) = False Then
+        If IsNumeric(txtFirstNum.Text) = False And IsNumeric(txtSecondNum.Text) = False Then
+            GoTo ErrorMsg3
+        ElseIf IsNumeric(txtFirstNum.Text) = False Then
             GoTo ErrorMsg1
         ElseIf IsNumeric(txtSecondNum.Text) = False Then
             GoTo ErrorMsg2
@@ -27,7 +29,6 @@ Public Class Form1
         End If
 
         txtResult.Text = result
-
         Exit Sub
 
 ErrorMsg1:
@@ -36,6 +37,10 @@ ErrorMsg1:
 
 ErrorMsg2:
         MessageBox.Show("Please enter a valid second number.", "Error")
+        Exit Sub
+
+ErrorMsg3:
+        MessageBox.Show("Please enter valid numbers.", "Error")
         Exit Sub
 
     End Sub
