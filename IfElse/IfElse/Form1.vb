@@ -9,11 +9,11 @@ Public Class Form1
         Dim st2 As String = txtSecondNum.Text
         Dim result As String
 
-        If IsNumeric(txtFirstNum.Text) = False And IsNumeric(txtSecondNum.Text) = False Then
+        If IsNumeric(st1) = False And IsNumeric(st2) = False Then
             GoTo ErrorMsg3
-        ElseIf IsNumeric(txtFirstNum.Text) = False Then
+        ElseIf IsNumeric(st1) = False Then
             GoTo ErrorMsg1
-        ElseIf IsNumeric(txtSecondNum.Text) = False Then
+        ElseIf IsNumeric(st2) = False Then
             GoTo ErrorMsg2
         End If
 
