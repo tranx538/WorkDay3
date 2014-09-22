@@ -23,6 +23,11 @@ Public Class Form1
         num1 = CDbl(st1)
         num2 = CDbl(st2)
 
+        If num1 < 0 Or num2 < 0 Then
+            MessageBox.Show("Please enter positive numbers.", "Error")
+            Exit Sub
+        End If
+
         If num1 > num2 Then
             result = "The larger number is " & num1 & "."
         ElseIf num2 > num1 Then
@@ -35,7 +40,5 @@ Public Class Form1
 
     End Sub
 
-    Private Sub txtFirstNum_TextChanged(sender As Object, e As EventArgs) Handles txtFirstNum.TextChanged
 
-    End Sub
 End Class
