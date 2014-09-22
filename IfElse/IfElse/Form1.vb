@@ -11,9 +11,7 @@ Public Class Form1
 
         If IsNumeric(txtFirstNum.Text) = False Then
             GoTo ErrorMsg1
-        End If
-
-        If IsNumeric(txtSecondNum.Text) = False Then
+        ElseIf IsNumeric(txtSecondNum.Text) = False Then
             GoTo ErrorMsg2
         End If
 
