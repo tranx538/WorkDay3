@@ -27,7 +27,6 @@ Public Class Form1
         End If
 
         txtResult.Text = result
-
         Exit Sub
 
 ErrorMsg1:
