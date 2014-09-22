@@ -10,11 +10,14 @@ Public Class Form1
         Dim result As String
 
         If IsNumeric(st1) = False And IsNumeric(st2) = False Then
-            GoTo ErrorMsg3
+            MessageBox.Show("Please enter valid numbers.", "Error")
+            Exit Sub
         ElseIf IsNumeric(st1) = False Then
-            GoTo ErrorMsg1
+            MessageBox.Show("Please enter a valid first number.", "Error")
+            Exit Sub
         ElseIf IsNumeric(st2) = False Then
-            GoTo ErrorMsg2
+            MessageBox.Show("Please enter a valid second number.", "Error")
+            Exit Sub
         End If
 
         num1 = CDbl(st1)
@@ -29,19 +32,6 @@ Public Class Form1
         End If
 
         txtResult.Text = result
-        Exit Sub
-
-ErrorMsg1:
-        MessageBox.Show("Please enter a valid first number.", "Error")
-        Exit Sub
-
-ErrorMsg2:
-        MessageBox.Show("Please enter a valid second number.", "Error")
-        Exit Sub
-
-ErrorMsg3:
-        MessageBox.Show("Please enter valid numbers.", "Error")
-        Exit Sub
 
     End Sub
 
